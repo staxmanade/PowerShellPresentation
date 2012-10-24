@@ -30,5 +30,13 @@ function HowsMyTime($topic){
 
     $timeTracker.Tick = get-date
 
-    ("You've blabbered for {0} minutes about {1} and only have {2} minutes left.") -f ([int]$timeSpent.TotalMinutes), $topic, ([int]$timeLeft.TotalMinutes)
+    if($topic -eq "done"){
+        "Hope you enjoyed the talk!"
+        ""
+        ""
+        "(-.-) Zzzzzzz..."
+    }
+    else{
+        ("You've blabbered for {0} minutes about {1} and only have {2} minutes left.") -f ([int]$timeSpent.TotalMinutes), $topic, ([int]$timeLeft.TotalMinutes)
+    }
 }
