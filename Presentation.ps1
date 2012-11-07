@@ -637,12 +637,21 @@ HowsMyTime "powershell overview"
 
 
     # 4 - plain ol executables
+		
+		# exe's already in your "PATH"
         ipconfig.exe
         where.exe ipconfig
         where.exe powershell
 
+		# exe by specifying full path
+        C:\Windows\System32\ipconfig.exe
+        
+		# execute a command who's path was stored in a variable
+        $cmd = 'C:\Windows\System32\ipconfig.exe'
+        & $cmd /all /?
 
-
+		# same as above (without the variable)
+        C:\Windows\System32\ipconfig.exe /all /?
 
 
 
