@@ -1,6 +1,11 @@
 PowerShell presentation material
 ======================
 
-Files used to introduce PowerShell in a presentation.
 
-Most of the talk is in the Presentation.ps1 file.
+## Introduction to Powershell
+
+[IntroToPowershellPresentation.ps1.md](https://github.com/staxmanade/PowerShellPresentation/blob/master/IntroToPowershellPresentation.ps1.md)
+
+## Some cool powershell stuff & stuff
+...TODO
+
