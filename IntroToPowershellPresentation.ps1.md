@@ -1225,7 +1225,19 @@ PowerShell is a `dynamically typed scripting language` composed of 2 major compo
         sleep -Milliseconds 20
     }
 
+# Some special number shortcuts
 
+    1kb   # ==> kilo-byte 1024
+    1mb   # ==> mega-byte 1048576
+    1gb   # ==> giga-byte 1073741824
+    1tb   # ==> tera-byte 1099511627776
+    1pb   # ==> peta-byte 11258999068426240  11,258,999,068,426,240
+    
+    #1eb   # ==> exa-byte ERR: does not work (but why would you need something that big?)
+    #1zb   # ==> zetta-byte ERR: wat?
+    #1yb   # ==> yotta-byte ERR: really?
+
+> note you don't have to use 1*b (ex: 1kb) you can specify any number (213kb ==> 218112)
 
 # Dig into my development environment setup script?
     
