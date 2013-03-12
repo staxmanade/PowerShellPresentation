@@ -120,6 +120,15 @@
 
 # Enough about me! What about you?
 
+- How many have ever used powershell?
+- Programming experience:
+  - More than 10 years?
+  - Between 5-10 years?
+  - Between 3-5 years?
+  - Less than 3 years?
+- Who has any amount of background in the Microsoft .Net space?
+
+
 ![vertical space](http://is.gd/VertSpace)
 
 
@@ -144,11 +153,6 @@
 - Runtime Environment intro/overview
 - Tips/Tricks
 - Fun Stuff
-
-### it also 
-- should not be too deep
-- should not be too shallow
-- should be Just right
 
 ![vertical space](http://is.gd/VertSpace)
 
@@ -1181,7 +1185,8 @@ PowerShell is a `dynamically typed scripting language` composed of 2 major compo
     
     
 # Usefull tips/tricks
-### (dot) sourcing a file (NOTE: see the TimeTracker.ps1 at the top of this file)
+
+### Dot-sourcing a file (EX: see the TimeTracker.ps1 at the top of this file)
 
     . .\SomeExternalScript.ps1
     # Now I can access functions/variables the external script contains
@@ -1194,32 +1199,43 @@ PowerShell is a `dynamically typed scripting language` composed of 2 major compo
     ii http://google.com # <-- I wish this worked - might write my own a wrapper?
 
     
-### "something... piped to" | clip
-    
+### Pipe output to the clipboard
+
     "Hello $groupName" | clip
 
     cat README.md | clip
-    
+
+
+### Get-Help
+
+    Get-Help
+    Get-Help ls
+    Get-Help alias
+
+### Show-Command
+
+    Show-Command ls
 
 ### Get-History
-    
-    get-history
 
-    
+    Get-History
+
+
 ### Start a powershell process as administrator 
+
     Start-Process PowerShell -Verb RunAs
 
 
-# Out-GridView
+### Out-GridView
 
     ls | out-gridview
 
 
-# download and parse some XML
+### Download and parse some XML
     ([xml] (new-object net.webclient).downloadstring('http://feeds.feedburner.com/ElegantCode')) | %{ $_.rss.channel.Item } | select title, creator
 
 
-# Progress Bar
+### Progress Bar
     1..100 | foreach{ 
         Write-Progress -activity "Sample progress bar" -PercentComplete $_;
         sleep -Milliseconds 20
@@ -1239,7 +1255,7 @@ PowerShell is a `dynamically typed scripting language` composed of 2 major compo
 
 > note you don't have to use 1*b (ex: 1kb) you can specify any number (213kb ==> 218112)
 
-# Dig into my development environment setup script?
+### Dig into my development environment setup script?
     
     set-executionpolicy unrestricted;
    
