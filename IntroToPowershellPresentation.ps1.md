@@ -428,7 +428,25 @@ PowerShell is a `dynamically typed scripting language` composed of 2 major compo
     'Hello World!' 
     # or
     "Hello World!"
-    
+
+## Multiline strings
+
+    @'
+    Hello
+    World
+    '@
+
+Note - these won't work
+
+    @'Hello
+    World
+    '@
+
+    @'
+    Hello
+    World'@
+
+
 ## String Interpolation
 
 ### Single quotes `don't` interpolate
