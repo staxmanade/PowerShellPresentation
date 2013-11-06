@@ -1243,7 +1243,18 @@ Note - these won't work
 
     Start-Process PowerShell -Verb RunAs
 
+### Stop executing on error
 
+By default powershell does not stop executing a script on error. When developing build scripts set:
+
+    $ErrorActionPreference = "stop";
+    
+
+### Check command return codes
+
+    msbuild.exe mySolution.sln
+    if($LASTEXITCODE -ne 0) { throw "build error" }
+    
 ### Out-GridView
 
     ls | out-gridview
